@@ -1,0 +1,495 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nike.css' %}">
+    <script defer src="{% static 'js/nike.js' %}"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    
+<!-- header section -->
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+
+
+    <a href="#" class="logo">nike</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#product">products</a>
+        <a href="#featured">featured</a>
+        <a href="#review">review</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+
+    </div>
+
+
+</header>
+
+
+<!-- home section  -->
+
+<section class="home" id="home">
+    
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="content">
+                <span>Nike Black Shoes</span>
+                <h3>Nike Jordan Shoes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sint quasi, iste labore? Inventore, facilis ex mollitia voluptas doloremque delectus rem.</p>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="image">
+                <img src="https://img2.pic.in.th/pic/nj-bla.md.png" class="shoe" alt="">
+                <img src="https://img2.pic.in.th/pic/pngtree.md.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>nike white-red shoes</span>
+                <h3>nike jordan shoes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sint quasi, iste labore? Inventore, facilis ex mollitia voluptas doloremque delectus rem.</p>
+
+                    <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="image">
+                <img src="https://img5.pic.in.th/file/secure-sv1/nj-w.md.png" class="shoe" alt="">
+                <img src="https://img2.pic.in.th/pic/pngtree.md.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>nike black-blue shoes</span>
+                <h3>nike jordan shoes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sint quasi, iste labore? Inventore, facilis ex mollitia voluptas doloremque delectus rem.</p>
+
+                    <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="image">
+                <img src="https://img5.pic.in.th/file/secure-sv1/nj-b.md.png" class="shoe" alt="">
+                <img src="https://img2.pic.in.th/pic/pngtree.md.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <span>nike white-blue shoes</span>
+                <h3>nike jordan shoes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.sint quasi, iste labore? Inventore, facilis ex mollitia voluptas doloremque delectus rem.</p>
+                    <a href="#" class="btn">add to cart</a>
+            </div>
+            <div class="image">
+                <img src="https://img5.pic.in.th/file/secure-sv1/nj-bl.md.png" class="shoe" alt="">
+                <img src="https://img2.pic.in.th/pic/pngtree.md.png" class="text" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+
+</section>
+
+<!-- service section  -->
+
+<section class="servive">
+    <div class="box-container">
+    
+    <div class="box">        
+        <i class="fas fa-shipping-fast"></i>
+        <h3>fast delivery</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime molestiae, cupiditate laboriosam officia cum officiis quod doloribus dolorem mollitia voluptatem </p>
+    </div>
+
+    <div class="box">        
+        <i class="fas fa-undo"></i>
+        <h3>10 days replacement</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime molestiae, cupiditate laboriosam officia cum officiis quod doloribus dolorem mollitia voluptatem </p>
+    </div>
+
+    <div class="box">        
+        <i class="fas fa-headset"></i>
+        <h3>24 x 7 support</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime molestiae, cupiditate laboriosam officia cum officiis quod doloribus dolorem mollitia voluptatem </p>
+    </div>
+</div>
+</section>
+
+<!-- product section -->
+
+<section class="product" id="product">
+    
+<h1 class="heading"> latest <span>products</span> </h1>
+   
+    <div class="box-container">
+        
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="https://img2.pic.in.th/pic/n-b.md.png" alt="">
+           <div class="content">
+                <h3>nike shoes</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add To Cart</a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="https://img2.pic.in.th/pic/n-w.md.png" alt="">
+            <div class="content">
+                <h3>nike shoes</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add To Cart</a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="https://img2.pic.in.th/pic/n-r.md.png" alt="">
+            <div class="content">
+                <h3>nike shoes</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add To Cart</a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="https://img5.pic.in.th/file/secure-sv1/n-bl.md.png" alt="">
+            <div class="content">
+                <h3>nike shoes</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add To Cart</a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="https://img2.pic.in.th/pic/n-bro-2.md.png" alt="">
+           
+            <div class="content">
+                <h3>nike shoes</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add To Cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="https://img5.pic.in.th/file/secure-sv1/n-blue-2.png" alt="">
+            <div class="content">
+                <h3>nike shoes</h3>
+                <div class="price">$120.99 <span>$150.99</span></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add To Cart</a>
+            </div>
+        </div>
+    
+    
+    
+    
+    </div>
+</section>
+
+<!-- feature section  -->
+
+<section class="featured" id="featured">
+    <h1 class="heading"> <span>featured</span> products </h1>
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/af53d53d-561f-450a-a483-70a7ceee380f/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-dunk-low-r8QXCd.png" class="featured-image-1" alt="">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cba88e5c-710c-48bd-8ada-adf6ecbc2dd4/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-dunk-low-r8QXCd.png" class="featured-image-1" alt="">     
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a2efb8df-29b1-4dfd-851c-7adefc70b59e/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-dunk-low-r8QXCd.png" class="featured-image-1" alt="">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/daf248ed-1484-44de-bff4-23a0991755eb/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-dunk-low-r8QXCd.png" class="featured-image-1" alt="">
+            </div>
+            <div class="big-image">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/228255b3-c351-46dc-82cd-61892fb818f2/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-dunk-low-r8QXCd.png" class="big-image-1" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>new nike panda</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. molestias vel labore maxime ullam
+                 minima adipisci non maiores nam quae. </p>
+                 <div class="price">$80.00 <span>$100.99</span></div>
+                <a href="#" class="btn"> add to cart</a>
+        </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/kpqddwb8onq6vurqmmyy/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-zoom-vomero-5-qZG4RJ.png"class="featured-image-2" alt="">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/sqj9b8gqy0mofneog6cx/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-zoom-vomero-5-qZG4RJ.png"class="featured-image-2" alt="">     
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/l0svab1ihb4o5dl7anuq/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-zoom-vomero-5-qZG4RJ.png" class="featured-image-2" alt="">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/dkf9neqkrfgzmtlu6ut3/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-zoom-vomero-5-qZG4RJ.png"class="featured-image-2" alt="">
+       </div>
+      
+            <div class="big-image">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/kpqddwb8onq6vurqmmyy/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-zoom-vomero-5-qZG4RJ.png" class="big-image-2" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>new nike panda</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. molestias vel labore maxime ullam
+                 minima adipisci non maiores nam quae. </p>
+                 <div class="price">$80.00 <span>$100.99</span></div>
+                <a href="#" class="btn"> add to cart</a>
+        </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d264d0a1-b7e1-4eee-bac9-0be7a2593231/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-max-excee-Zvl8cs.png"class="featured-image-3" alt="">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/06c233fa-1735-4177-b5f0-0092a3e3eff6/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-max-excee-Zvl8cs.png"class="featured-image-3" alt="">     
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/342b9b0a-5615-45f7-99da-f656a4af6b94/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-max-excee-Zvl8cs.png"class="featured-image-3" alt="">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/4f11c63c-ad38-4637-89bf-1b1743090667/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-max-excee-Zvl8cs.png"class="featured-image-3" alt="">
+       </div>
+            <div class="big-image">
+                <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d264d0a1-b7e1-4eee-bac9-0be7a2593231/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89-air-max-excee-Zvl8cs.png" class="big-image-3" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h3>new nike panda</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. molestias vel labore maxime ullam
+                 minima adipisci non maiores nam quae. </p>
+                 <div class="price">$80.00 <span>$100.99</span></div>
+                <a href="#" class="btn"> add to cart</a>
+        </div>
+    </div>
+    
+    
+
+</section>
+
+<!-- review section  -->
+<section class="review" id="review">
+    <h1 class="heading"> customer's <span>review</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1572" alt="">
+            <h3>john deo</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, quis molestiae animi aut velit, 
+                 Maiores fugiat ut mollitia nostrum suscipit.</p>
+            
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://img.freepik.com/premium-photo/close-up-young-handsome-man-with-beard-smiling-camera-with-confidence-standing-white-background_1258-49635.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1712188800&semt=ais" alt="">
+            <h3>Audy Soyo</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, quis molestiae animi aut velit, 
+                 Maiores fugiat ut mollitia nostrum suscipit.</p>
+            
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://dwpdigital.blog.gov.uk/wp-content/uploads/sites/197/2016/07/P1090594-1.jpeg" alt="">
+            <h3>Lucy mime</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, quis molestiae animi aut velit, 
+                 Maiores fugiat ut mollitia nostrum suscipit.</p>
+            
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<!-- newsletter saction -->
+
+    <section class="newsletter">
+
+        <div class="content">
+            <h3>mothly newsletter</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur vitae, eius veritatis sapiente cupiditate inventore optio, 
+                impedit nobis rerum minima doloremque et. Hic, inventore? Alias id voluptatem modi magnam eligendi?</p>
+                <form action="">
+                    <input type="email" placeholder="enter your email" class="box">
+                    <input type="submit" value="send" class="btn">
+                </form>
+        </div>
+    </section>
+
+
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>our stores</h3>
+            <a href="#">Thai</a>
+            <a href="#">USA</a>
+            <a href="#">Japan</a>
+            <a href="#">Paris</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links </h3>
+            <a href="#">home</a>
+            <a href="#">product</a>
+            <a href="#">feature</a>
+            <a href="#">review</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my favorite</a>
+            <a href="#">my orders</a>
+            <a href="#">newsletter</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+        <div class="credit"> created by <span> mr. Han </span> | all rights reserved! </div>
+
+
+    </div>
+    
+</section>
+
+
+</body>
+</html>
+
+

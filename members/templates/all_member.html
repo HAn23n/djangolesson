@@ -1,0 +1,315 @@
+
+{% extends "master.html"%}
+{% load static %}
+
+{% block title %}
+    All Member 
+    {% endblock %}
+{% block content %}
+<script defer src="{% static 'js/all_member.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/all_member.css' %}">
+
+<body style="background-color:rgb(60, 65, 65);">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<!-- The Modal Add -->
+<div class="modal" id="addModal" onclick="checknumber()">
+    <div class="modal-dialog">
+        <div class="modal-content">
+  
+            <!-- Modal Header -->
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title text-warning">Add Members</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="alertBox">
+                    <form id="addForm" method="post" action="{% url 'add' %}" >
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="alert alert-danger" id="alertMsg" style="display: none;">
+                                <strong>Danger!</strong> กรุณากรอกข้อมูลในฟิลด์ให้ครบถ้วน.
+                            </div>       
+
+                            <div class="col-md-6">
+                                <label for="firstname" class="form-label">Firstname</label>
+                                <input type="text" class="form-control" id="firstname" name="firstname">
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Check this checkbox to continue.</div>
+                            
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastname" class="form-label">Lastname</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname">
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Check this checkbox to continue.</div>
+                            </div>    
+                            <div class="col-12">
+                                <label for="id_card" class="form-label">ID Card</label>
+                                <input type="text" class="form-control" id="id_card" name="id_card" placeholder="13 หลัก" maxlength="13">
+                                <div id="add_alertIDCard" class="alert alert-danger" style="display: none;">
+                                    <warning>Warning!</warning> กรุณากรอกบัตรประจำตัวประชาชนให้ถูกต้อง.
+                                </div>
+                                
+                            </div>
+                            <div class="col-12">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="ที่อยู่">
+                            </div>
+                            <div class="col-6">
+                                <label for="birth_date" class="form-label">Birth</label>
+                                <input type="date" class="form-control" id="birth_date" name="birth_date" placeholder="YYYY-MM-DD">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone_number" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phone_number" name="phone_number"  placeholder="10 หลัก" maxlength="10">
+                                <div id="add_alertPhoneNumber" class="alert alert-danger" style="display: none;">
+                                    <warning>Warning!</warning>กรุณากรอกหมายเลขโทรศัพท์ให้ถูกต้อง.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="abs@example.com">
+                            </div>
+
+                            <div class="col-6">
+                                <label for="type_status" class="form-label">Type User</label>
+                                <select class="form-select" id="type_status" name="type_status" onchange="updateTypeStatus(this)">
+                                    <option value="1">User</option>
+                                    <option value="2">Editer</option>
+                                    <option value="3">Admin</option>
+                                </select>
+                            </div>
+                          <div class="col-6">
+                                <label for="inactive_fg" class="form-label">Activate/Inactivate</label>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="inactive_fg" name="inactive_fg">
+                                    <label class="form-check-label" for="inactive_fg">inactive</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+  
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button id="addbutton" type="submit" form="addForm" class="btn btn-success" onclick="return validateForm()">Add</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="resetmsg()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a href="#" class="btt"> <span class="btt-icon"></span> </a>
+
+
+
+<div class="container mt-3 p-5 rounded" style="background-color: rgb(255, 213, 3); box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+
+
+
+
+<div class="container">
+<h2 id="memlenght" style="color: black;">Member List Total: {{ members|length }}</h2>
+
+<form class="d-flex">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+        ADD Members
+    </button>
+    <button id="toggle" type="button" class="btn btn-success"><i class="fas fa-eye"></i> Hide</button>
+    <div class="form-floating">   
+    <select id="srow" class="form-select" style="width: 150px; height: 40px;" aria-label="Default select example" onchange="handleSelectChange()">
+            <option selected>All Row</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <label for="srow">Works with selects</label>
+    </div>
+</form>
+<p></p>
+
+<form class="d-flex">
+    <div class="form-floating">
+        <select class="form-select" id="select_type" aria-label="Floating label select example" style="width: 150px; height: 40px;">
+            <option selected>Select menu</option>
+            <option value="1">User</option>
+            <option value="2">Editer</option>
+            <option value="3">Admin</option>
+        </select>
+        <label for="floatingSelectGrid1">Type_status</label>
+    </div>
+    <div class="form-floating">
+        <select class="form-select" id="floatingSelectGrid2" aria-label="Floating label select example" style="width: 150px; height: 40px;">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        <label for="floatingSelectGrid2">Works with selects</label>
+    </div>
+    <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search" action="{% url 'members' %}" >
+    <button class="btn btn-primary" type="submit">Search</button>
+</div>
+</form>
+
+
+<br>
+<table id="memberTable" class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr class="table-dark text-warning">
+                <th>ID</th>
+                <th>CardId</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Birth</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+            <tr data-member-id="{{ member.id }}">
+                <td><a href="details/{{member.id}}">{{ member.id }}</a></td>
+                <td data-field="id_card">{{ member.id_card }}</td>
+                <td data-field="firstname">{{ member.firstname }}</td>
+                <td data-field="lastname">{{ member.lastname }}</td>
+                <td data-field="birth_date">{{ member.birth_date }}</td>
+                <td data-field="address">{{ member.address }}</td>
+                <td data-field="phone_number">{{ member.phone_number }}</td>
+                <td data-field="email">{{ member.email }}</td>
+                <td data-field="inactive_fg">{{ member.inactive_fg }}</td>
+                <td data-field="type_status">{{ member.type_status }}</td>
+
+                <td>
+                    <button type="button" class="btn btn-primary edit-btn" data-member-id="{{ member.id }}" data-bs-toggle="modal" data-bs-target="#editModal{{ member.id }}">
+                        Edit
+                    </button>
+                    
+                <td>
+                        <form id="delete{{ member.id }}" action="{% url 'delete' id=member.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="button" class="btn btn-danger" onclick="confirmDelete('{{ member.id }}')">Delete</button>
+                        </form>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success" onclick="deleteMember('{{ member.id }}')">Delete</button>
+                </td>
+                
+                    
+                    
+            </tr>
+              
+            <!-- The Modal Edit-->
+            <div class="modal fade" id="editModal{{ member.id }}" aria-labelledby="editModal{{ member.id }}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Edit Members</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="editForm{{ member.id }}" method="post" action="{% url 'update' id=member.id %} " >
+                                {% csrf_token %}
+                                <div class="row g-3">
+                                    <div id="updateAlert" class="alert alert-success" role="alert" style="display: none;">
+                                        <strong>Update Successful!</strong> 
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="firstname" class="form-label">Firstname</label>
+                                        <input type="text" class="form-control" id="firstname" name="firstname" value="{{ member.firstname }}">
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastname" class="form-label">Lastname</label>
+                                        <input type="text" class="form-control" id="lastname" name="lastname" value="{{ member.lastname }}">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="id_card" class="form-label">ID Card</label>
+                                        <input type="text" class="form-control" id="id_card" name="id_card" placeholder="13 หลัก" maxlength="13" value="{{ member.id_card }}" readonly style="background-color: lightgray;">
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="City" value="{{ member.address }}">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="birth_date" class="form-label ">Birth</label>
+                                        <input type="text" class="form-control" id="birth_date" name="birth_date" placeholder="YYYY-MM-DD" value="{{ member.birth_date }} ">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone_number" class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="10 หลัก" maxlength="10" value="{{ member.phone_number }}" oninput="checkPhoneNumber(this)">
+                                        <div id="phone_number_error" class="text-danger" style="display: none;">กรุณากรอกหมายเลขโทรศัพท์ให้ครบ 10 หลัก</div>
+                                        <div id="phedit1" class="alert alert-danger" style="display: none;">
+                                            <warning>Warning!</warning>กรุณากรอกหมายเลขโทรศัพท์ให้ถูกต้อง.
+                                        </div>
+                                        
+                                        <div id="phedit2" class="alert alert-danger" style="display: none;">
+                                            <warning>Warning!</warning>กรุณากรอกเฉพาะตัวเลขเท่านั้น.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="abs@example.com" value="{{ member.email }}">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="type_status" class="form-label">Type User</label>
+                                        <select class="form-select" id="type_status" name="type_status">
+                                            <option value="1" {% if member.type_status == 1 %}selected{% endif %}>User</option>
+                                            <option value="2" {% if member.type_status == 2 %}selected{% endif %}>Editer</option>
+                                            <option value="3" {% if member.type_status == 3 %}selected{% endif %}>Admin</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-6">
+                                        <label for="inactive_fg" class="form-label">Activate/Inactivate</label>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="inactive_fg" name="inactive_fg" {% if member.inactive_fg %}checked{% endif %}>
+                                            <label class="form-check-label" for="inactive_fg">{% if member.inactive_fg %}Inactive{% endif %}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="submit" form="editForm{{ member.id }}" class="btn btn-primary" onclick="updateMember('{{ member.id }}')">Update</button>
+                             <button id="updateButton" type="button" class="btn btn-primary" onclick="updateMember('{{ member.id }}')">AjaxUpdate</button>
+                             
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            {% endfor %}
+        </tbody>
+    </table>
+    <div id="pagination-container" class="mt-3"></div>
+</div>
+</div>
+
+
+</body>
+{% endblock %}

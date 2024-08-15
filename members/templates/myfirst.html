@@ -1,0 +1,273 @@
+<!-- <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:  1em;
+}
+
+body{
+  text-align: center;
+    background: #fdfdfd;
+    line-height: 1.5;
+}
+
+button{
+    display: block ;
+    margin: 15px auto;
+}
+
+#bio {
+  max-width: 60%;
+  margin: 15px auto;
+  padding: 10px;
+}
+
+</style> -->
+
+<!-- <person>
+  <name>Assada</name>
+  <surname>Chorraka</surname>
+  <nationality>Thai</nationality>
+  <languages>
+    <languages>Thai</languages>
+    <languages>English</languages>
+  </languages>
+</person>
+
+json
+{
+  "name" : "Assada",
+  "surname" : "Chorraka",
+  "nationality" : "Thai",
+  "languages" : ["thai","English"],
+}
+
+-->
+<!-- <script>
+const btn  = document.querySelector("#request");
+const bio  = document.querySelector("#bio");
+
+const request = new XMLHttpRequest();
+
+request.onreadystatechange = function() {
+
+  if(request.readyState == 4){
+    bio.style.border ="1px solid #e8e8e8"
+    
+    if(request.status == 200){
+      bio.innerHTML = request.responseText
+    }else{
+      bio.innerHTML = "An error " + request.status + '' + request.statusText
+    }
+    
+  }
+
+}
+
+request.open("get","https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1")
+
+btn,addEventListener('click',function(){
+  this.st.display ='none';
+
+  request.send
+})
+
+</script> -->
+
+<!-- 
+<script>
+  $(document).ready(function(){
+
+    const $btn =$("#request");
+    const $bio =$("#bio");
+
+    function completeFunction(responseText,textStatus,request){
+        $bio.css('border','1px solid #e8e8e8');
+
+        if(textStatus == 'error'){
+          $bio.text( "An error " + request.status + '' + request.statusText)
+        }
+    }
+  $bio.on('click',function(){
+    $(this).hide();
+    $bio.load('https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1',completeFunction);
+  })
+
+  })
+
+
+</script>
+
+
+  <p>Data retrieved from <a href="https://en.wikipedia.org/wiki/Alexander_the_Great" target="_blank">Wikipedia</a></p>
+  <div>
+    <img src="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Alexander_the_Great_mosaic_%28cropped%29.jpg/220px-Alexander_the_Great_mosaic_%28cropped%29.jpg" alt="Alex">
+    <button id="request">Learn more about Alexander_the_Great</button>
+    <div id="bio"></div>
+  </div>
+
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  
+<script defer src="{% static 'js/myexample.js' %}"></script>
+
+
+<div id="sample">
+  <h2>Getting Data</h2>
+  <p>Please click on the button to fetch data</p>
+  <button type="button" onclick="displayDoc()">Click Me</button>
+</div>
+
+
+<div id="example">
+  <p>Please click on the button to fetch 6th record from the server</p>
+  <button type="button" onclick="displayRecords()">Click Here</button>
+</div>
+
+<div id="sample2">
+  <h2>Example of POST Request</h2>
+  <button type="button" onclick="sendDoc()">Post Data</button>
+</div>
+
+<div id="sample3">
+  <h2>Example of Delete Request</h2>
+  <button type="button" onclick="delDoc()">Deleteing Data</button>
+</div>
+
+<div id="sample">
+  <h2>Display Data</h2>
+  <button type="button" onclick="handleResponse()">Submit</button>
+</div>
+
+<div id="example2">
+  <p>AJAX Example</p>
+  <button type="button" onclick="getBinaryData()">Click Here</button>
+</div>
+
+<form id = "mForm">
+  <h2>Enter the requested Data</h2>
+  <label for="Utitle">Title</label>
+  <input id="Utitle" type="text" name="title"><br>
+
+  <label for="UId">UserId</label>
+  <input id="UId" type="number" name="UserID"><br>
+
+  <label for="Ubody">Body</label>
+  <input id="Ubody" type="text" name="body"><br>
+
+  <label for="Uage">Age</label>
+  <input id="Uage" type="number" name="age"><br>
+
+  <button type="button" onclick="sendFormData()">Submit Record</button>
+</form>
+<div id="example3"></div>
+
+
+<div>
+  <h2> Uploading Multiple files</h2>  
+  <input type="file">
+  <input type="file">
+  <button id="btn2">Submit</button>
+</div>
+
+<div id="example4">
+  <h2>Sending Form Data</h2>
+  <button type="button" onclick="dataDoc()">Submit</button>
+</div>
+
+<h2>Enter the requested Data</h2>
+   <label for="Utitle">Title</label>
+   <input id="Utitle" type="text" name="title"><br>
+   
+   <label for="UId">UserId</label>
+   <input id="UId" type="number" name="UserID"><br>
+   
+   <label for="Ubody">Body</label>
+   <input id="Ubody" type="text" name="body"><br>
+   
+   <label for="Uage">Age</label>
+   <input id="Uage" type="number" name="age"><br>
+   
+   <button type="button" onclick="sendFormData()">Submit Record</button>
+   <div id="example5"></div>
+
+
+</div>
+
+<div id="example7">
+<h2>Enter data</h2>
+<label for="Utitle">Title</label>
+<input id="Utitle" type="text" name="title"><br>
+
+<label for="UId">UserId</label>
+<input id="UId" type="number" name="UserID"><br>
+
+<label for="Ubody">Body</label>
+<input id="Ubody" type="text" name="body"><br>
+
+<button type="button" onclick="sendRecords()">Submit</button>
+</div>
+
+<div id="sm1">
+  <h2>PUT Request</h2>
+  <button type="button" onclick="updateDoc()">Updating Record</button>
+</div>
+
+<div id="sm3">
+  <h2>Sending JSON Data</h2>
+  <button type="button" onclick="sendDoc2()">Uploading Data</button>
+</div>
+
+<div id="sm4">
+  <h2>Sending Data object</h2>
+  <button type="button" onclick="sendDataObject()">Submit</button>
+</div>
+
+<div id="ex2">
+  <p>Please click on the button to fetch data</p>
+  <button type="button" onclick="ShowDoc()">Click Here</button>
+</div>
+
+
+<form name = 'myForm3'>
+  Name: <input type = 'text' name = 'username' /> <br />
+  Time: <input type = 'text' name = 'time' />
+</form>
+
+</form>
+
+
+
+
+
+
+
+
+<br>
+<a href="ajaxindex2.html">go</a>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

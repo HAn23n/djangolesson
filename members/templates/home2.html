@@ -1,0 +1,393 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home2.css' %}">
+    <script defer src="{% static 'js/home.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg" alt="">
+        </a>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#products">products</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a>
+
+    </nav>
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fa fa-search"></label>
+    </div>
+
+    <div class="cart-item-container">
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="https://media-cdn.bnn.in.th/11740/Apple-iPhone-12-Black-1-square_medium.jpg" alt="">
+            <div class="content">
+                <h3>cart item 01</h3>
+                <div class="price">$20.00/-</div>
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="https://media.studio7thailand.com/7107/iPhone_13_PDP_Position-1A_Color_Starlight__1-square_medium.jpg" alt="">
+            <div class="content">
+                <h3>cart item 02</h3>
+                <div class="price">$25.00/-</div>
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="https://media-cdn.bnn.in.th/234723/iPhone_14_Midnight_PDP_Image_Position-1A_Midnight_1-square_medium.jpg"alt="">
+            <div class="content">
+                <h3>cart item 03</h3>
+                <div class="price">$30.00/-</div>
+            </div>
+        </div>
+        <div class="cart-item">
+            <span class="fas fa-times"></span>
+            <img src="https://media-cdn.bnn.in.th/332546/iPhone_15_Plus_Black_1-square_medium.jpg"alt="">
+            <div class="content">
+                <h3>cart item 04</h3>
+                <div class="price">$50.00/-</div>
+            </div>
+        </div>
+        <a href="#" class="btn">checkout now</a>
+    </div>
+</header>
+
+<!-- home section -->
+<section class="home" id="home">
+    <div class="content">
+        <h3>Every day is easy with iPhone.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tenetur dignissimos assumenda magni soluta, doloribus harum consequuntur tempore, animi delectus laudantium omnis 
+            alias sapiente quaerat rem! Saepe nostrum ut dolores.</p>
+            <a href="#" class="btn">get yours now</a>
+    </div>
+</section>
+
+<!-- about section -->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="https://sm.mashable.com/t/mashable_me/photo/default/iphone-14-pro-a16_7921.1248.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>The incredible speed of the power</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem ea corporis sint a sit error animi saepe, porro nostrum quasi similique repudiandae facere quidem molestias 
+                doloribus rerum perspiciatis quis voluptatibus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus dignissimos nobis voluptatum! Quod dolore quaerat est repudiandae? Libero vero consequatur deserunt sed adipisci, l
+                aboriosam quisquam. Impedit repellendus sint mollitia.</p>
+            <a href="#" class="btn">learn more</a>
+            </div>
+    </div>
+</section>
+
+<!-- menu section -->
+
+<section class="menu" id="menu">
+    <h1 class="heading"> our <span>menu</span> </h1>
+    <div class="box-container">
+        
+        <div class="box">
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba13-midnight-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367688034" alt="">
+            <h3>Macbook Air</h3>
+            <div class="price">$50.99 <span>70.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="https://media-cdn.bnn.in.th/234723/iPhone_14_Midnight_PDP_Image_Position-1A_Midnight_1-square_medium.jpg" alt="">
+            <h3>iPhone</h3>
+            <div class="price">$20.99 <span>30.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="https://www.apple.com/th/ipad-pro/images/overview/hero/hero_combo__fcqcc3hbzjyy_medium.jpg" alt="">
+            <h3>iPad</h3>
+            <div class="price">$30.99 <span>40.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MTJV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1694014871985" alt="">
+            <h3>Airpod Pro</h3>
+            <div class="price">$10.99 <span>20.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-max-hero-select-202011_FMT_WHH?wid=607&hei=556&fmt=jpeg&qlt=90&.v=1633623988000" alt="">
+            <h3>AirPods Max</h3>
+            <div class="price">$17.99 <span>27.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+        <div class="box">
+            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MT3D3ref_VW_34FR+watch-case-44-aluminum-midnight-cell-se_VW_34FR+watch-face-44-aluminum-midnight-se_VW_34FR?wid=752&hei=720&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=ajJYOEQxYjNlejNwbWNnSU16d0NYaWhSbVIzRFJTYlp1MEk4OWNDaTcvNTlEbzMrd1Z5SUpEd0hiT0ZLRlZGNHVDTzRRaC84T1VMbXJRN05SRldIelBRWnNWZWtLcTZCYVRER3FsWWowaTk5RG8zK3dWeUlKRHdIYk9GS0ZWRjR4cVNUNDJadDNVSmRncE9SalAvZ24zZmdHMUt6VFlqa3BpV2VBOUNycGdrcDIxSk5peW5HTWQ0c004MmJwMkNtdGl6SHg4ZE5NYmlWSVQ5akRTdGpCZkNDUmN0SlpnYXpQNFNTbUVsbTlnST0=" alt="">
+            <h3>Apple Watch</h3>
+            <div class="price">$8.99 <span>10.99</span></div>
+            <a href="#" class="btn">add to cart</a>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="products" id="products">
+    <h1 class="heading"> our <span>product</span> </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://image.makewebeasy.net/makeweb/m_1920x0/kflenu7tR/PRODUCTPICTURE/apple_pencil_two_one.jpg?v=202012190947" alt="">
+            </div>
+            <div class="content">
+                <h3>Pencil</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">7.99 <span>$10.99</span></div>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/HQEY2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1684175834823" alt="">
+            </div>
+            <div class="content">
+                <h3>Magic Keyboard</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">12.99 <span>$20.99</span></div>
+            </div>
+        </div>
+        
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="https://www.apple.com/th/tv-home/images/overview/hero_homepod_appletv_lockup__ecxlvf764zu6_medium.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Apple TV</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">39.99 <span>$20.99</span></div>
+                    </div>
+                </div>
+
+
+    </div>
+
+</section>
+
+<!-- review section -->
+
+<section class="review" id="review">
+    <h1 class="heading"> customer's <span>review</span></h1>
+    
+    <div class="box-container">
+     
+        <div class="box">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid dolorem quia provident praesentium voluptatem, pariatur, doloribus impedit cumque fugit sequi ipsa 
+                recusandae minus voluptatum quis esse dignissimos consequatur nesciunt?</p>
+                <img src="https://t4.ftcdn.net/jpg/03/99/05/07/360_F_399050782_yVZttZCK8YoufsbDzHPL2xFzYtMOlleZ.jpg" class="user" alt="">
+                <h3>Tom Holland</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid dolorem quia provident praesentium voluptatem, pariatur, doloribus impedit cumque fugit sequi ipsa 
+                recusandae minus voluptatum quis esse dignissimos consequatur nesciunt?</p>
+                <img src="https://t4.ftcdn.net/jpg/06/88/84/35/360_F_688843506_Hg2ueKgoOwdONhvWkYp1FPj0VbLYVLMI.jpg" class="user" alt="">
+                <h3>Andy Sakalet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid dolorem quia provident praesentium voluptatem, pariatur, doloribus impedit cumque fugit sequi ipsa 
+                recusandae minus voluptatum quis esse dignissimos consequatur nesciunt?</p>
+                <img src="https://t4.ftcdn.net/jpg/04/70/42/41/360_F_470424165_KmAp9MvtRHzwuiROK221MQFtxW4ckKQP.jpg" class="user" alt="">
+                <h3>Lucy Sakalet</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact section -->
+
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>contact</span> us </h1>
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7903.675802134109!2d98.38439506691722!3d7.911996137761078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503164242a51eb%3A0xd54fd8793344ff9!2sPhuket%20Rajabhat%20University!5e0!3m2!1sen!2sth!4v1713768506759!5m2!1sen!2sth" width="600" height="450" style="border:0;" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        
+        <form action="">
+            <h3>get in touch</h3>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" placeholder="name">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" placeholder="number">
+            </div>
+            <input type="submit" value="contact now" class="btn">
+        </form>
+        </div>
+    </section>
+
+<!-- blogs section -->
+
+<section class="blogs" id="blogs">
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+       
+        <div class="box">
+            <div class="image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ_7rGkoXiiueMJoE8nvLGtR1z2oXyDfhLihlMmrIIdQ&s" alt="">
+            </div>
+
+            <div class="content">
+                <a href="#" class="title">Easy to use</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab magnam sapiente praesentium reiciendis placeat quibusdam. </p>
+            </div>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://cdn.mos.cms.futurecdn.net/2x7soPfXGNuTcQcuPwEQ8X.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <a href="#" class="title">Very beautiful style</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab magnam sapiente praesentium reiciendis placeat quibusdam. </p>
+            </div>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://cdn.mos.cms.futurecdn.net/NHRd6xATDV324mf6dDCbER.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <a href="#" class="title">Save energy</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab magnam sapiente praesentium reiciendis placeat quibusdam. </p>
+            </div>
+            <a href="#" class="btn">read more</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- /* footer section */ -->
+
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">products</a>
+        <a href="#">review</a>
+        <a href="#">contact</a>
+        <a href="#">blogs</a>
+    </div>
+
+    <div class="credit">created by <span>mr.web designer</span> | all right reserved</div>
+
+
+</section>
+
+
+
+
+</body>
+</html>
